@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Miss Consommons Local — concours à Kinshasa : 24 communes, 24 ambassadrices du consommer local. Grande finale pour couronner la lauréate."
+    />
+    <title>Miss Consommons Local | Kinshasa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Icônes SVG inline (style libre / type Figma, placeholders) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="icon-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+        <path d="M2 17l4-12 4 8 4-10 4 8 4-6v12H2z" stroke-linejoin="round" />
+        <path d="M6 21h12" />
+      </symbol>
+      <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+        <path d="M11 20A7 7 0 0 1 6.5 6 12 12 0 0 1 20 9a7 7 0 0 1-9 11z" />
+        <path d="M12 20v-7" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <path d="M16 2v4M8 2v4M3 10h18" />
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+        <path d="m22 6-10 7L2 6" />
+      </symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+    </svg>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-mcl">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#accueil">
+            <svg class="text-warning" width="28" height="28" aria-hidden="true"><use href="#icon-crown" /></svg>
+            <span>Miss Consommons Local</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMain"
+            aria-controls="navbarMain"
+            aria-expanded="false"
+            aria-label="Ouvrir le menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
+              <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+              <li class="nav-item nav-item--communes-submenu position-relative">
+                <button
+                  class="nav-link nav-dropdown-communes d-inline-flex align-items-center gap-2"
+                  type="button"
+                  id="navCommunesToggle"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navCommunesSubmenu"
+                  aria-expanded="false"
+                  aria-controls="navCommunesSubmenu"
+                >
+                  <span>24 communes</span>
+                  <span class="nav-communes-caret" aria-hidden="true"></span>
+                </button>
+                <div class="collapse nav-communes-submenu" id="navCommunesSubmenu">
+                  <ul class="list-unstyled mb-0 py-1 nav-communes-submenu__list">
+                    <li>
+                      <a class="nav-link nav-communes-submenu__link py-2" href="ambassadrices-2024.html">Ambassadrices 2024</a>
+                    </li>
+                    <li>
+                      <a class="nav-link nav-communes-submenu__link py-2" href="ambassadrices-2025.html">Ambassadrices 2025</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#calendrier">Calendrier</a></li>
+              <li class="nav-item"><a class="nav-link" href="#organisation">Organisation</a></li>
+              <li class="nav-item"><a class="nav-link" href="#partenaires">Partenaires</a></li>
+              <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-nav-inscription ms-lg-2 mt-2 mt-lg-0"
+                  href="https://wa.me/243831700110"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="btn-nav-inscription__pen" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                  </svg>
+                  Inscrivez-vous
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-light btn-sm ms-lg-1 mt-2 mt-lg-0 px-3" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero : carrousel plein écran, zoom lent, textes & visuels distincts -->
+      <section id="accueil" class="hero-mcl hero-mcl--photo-plain" aria-roledescription="carousel" aria-label="Présentation du concours">
+        <div class="hero-slider" id="hero-slider" data-interval="9000" tabindex="0">
+          <div class="hero-slider__track">
+            <article
+              class="hero-slide is-active"
+              id="hero-slide-0"
+              data-slide="0"
+              role="tabpanel"
+              aria-labelledby="hero-tab-0"
+              aria-hidden="false"
+            >
+              <div
+                class="hero-slide__media"
+                role="img"
+                aria-label="Miss Ambassadrice consommer local Kinshasa — lauréate et prix"
+                style="background-image: url('images/hero-slide-1.png')"
+              ></div>
+              <div class="container hero-slide__wrap py-5">
+                <div class="row align-items-center min-vh-hero-inner">
+                  <div class="col-lg-10 col-xl-9 hero-slide__content">
+                    <p class="hero-slide__eyebrow">Agriculture &amp; marchés locaux</p>
+                    <h1 class="hero-slide__title display-font">Du champ à l’assiette, célébrons le vivant</h1>
+                    <p class="hero-slide__lead">
+                      «&nbsp;le concours met en lumière celles et ceux qui font tourner l’économie locale, promouvoir la
+                      consommation locale avec le leadership féminin et l’entrepreneuriat&nbsp;»
+                    </p>
+                    <div class="hero-slide__actions d-flex flex-wrap gap-3">
+                      <a class="btn btn-gold btn-lg px-4" href="#mission">La mission</a>
+                      <a class="btn btn-outline-light btn-outline-light-mcl btn-lg" href="#ambassadrices">Les 24 communes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="hero-slide"
+              id="hero-slide-1"
+              data-slide="1"
+              role="tabpanel"
+              aria-labelledby="hero-tab-1"
+              aria-hidden="true"
+            >
+              <div
+                class="hero-slide__media"
+                role="img"
+                aria-label="Miss Culinaire Kinshasa — marché et promotion du local"
+                style="background-image: url('images/hero-slide-2.png')"
+              ></div>
+              <div class="container hero-slide__wrap py-5">
+                <div class="row align-items-center min-vh-hero-inner">
+                  <div class="col-lg-10 col-xl-9 hero-slide__content">
+                    <p class="hero-slide__eyebrow">24 communes · 24 voix</p>
+                    <h1 class="hero-slide__title display-font">Ambassadrices du « consommer local »</h1>
+                    <p class="hero-slide__lead">
+                      Une représentante par commune pour porter fièrement l’excellence du terroir, quartier par quartier,
+                      jusqu’à la scène finale.
+                    </p>
+                    <div class="hero-slide__actions d-flex flex-wrap gap-3">
+                      <a class="btn btn-gold btn-lg px-4" href="#ambassadrices">Voir les communes</a>
+                      <a class="btn btn-outline-light btn-outline-light-mcl btn-lg" href="#calendrier">Calendrier</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="hero-slide"
+              id="hero-slide-2"
+              data-slide="2"
+              role="tabpanel"
+              aria-labelledby="hero-tab-2"
+              aria-hidden="true"
+            >
+              <div
+                class="hero-slide__media"
+                role="img"
+                aria-label="Manufacture de riz et filière locale — Kinshasa, usine CL"
+                style="background-image: url('images/hero-slide-3.png')"
+              ></div>
+              <div class="container hero-slide__wrap py-5">
+                <div class="row align-items-center min-vh-hero-inner">
+                  <div class="col-lg-10 col-xl-9 hero-slide__content">
+                    <p class="hero-slide__eyebrow">Grande finale · Kinshasa</p>
+                    <h1 class="hero-slide__title display-font">Sous les projecteurs, une couronne pour la mission</h1>
+                    <p class="hero-slide__lead">
+                      Un show unique où les finalistes s’affrontent avec élégance : au-delà du titre, c’est tout un
+                      message pour le local qui rayonne.
+                    </p>
+                    <div class="hero-slide__actions d-flex flex-wrap gap-3">
+                      <a class="btn btn-gold btn-lg px-4" href="#calendrier">La grande soirée</a>
+                      <a class="btn btn-outline-light btn-outline-light-mcl btn-lg" href="#contact">Presse &amp; contact</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="hero-slider__chrome">
+            <button type="button" class="hero-slider__arrow hero-slider__arrow--prev" aria-controls="hero-slider" aria-label="Slide précédente">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button type="button" class="hero-slider__arrow hero-slider__arrow--next" aria-controls="hero-slider" aria-label="Slide suivante">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+            <div class="hero-slider__dots" role="tablist" aria-label="Choisir une introduction">
+              <button type="button" class="hero-slider__dot is-active" id="hero-tab-0" role="tab" aria-selected="true" aria-controls="hero-slide-0" tabindex="0">
+                <span class="visually-hidden">Slide 1 — Terroir</span>
+              </button>
+              <button type="button" class="hero-slider__dot" id="hero-tab-1" role="tab" aria-selected="false" aria-controls="hero-slide-1" tabindex="-1">
+                <span class="visually-hidden">Slide 2 — Ambassadrices</span>
+              </button>
+              <button type="button" class="hero-slider__dot" id="hero-tab-2" role="tab" aria-selected="false" aria-controls="hero-slide-2" tabindex="-1">
+                <span class="visually-hidden">Slide 3 — Finale</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-slider__progress" aria-hidden="true">
+            <span class="hero-slider__progress-fill" id="hero-progress-fill"></span>
+          </div>
+
+          <a class="hero-scroll-cue" href="#mission" aria-label="Descendre vers la mission">
+            <span class="hero-scroll-mouse" aria-hidden="true"></span>
+            <span>Défiler</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Mission -->
+      <section id="mission" class="section-padding section-mission">
+        <div class="section-mission__glow" aria-hidden="true"></div>
+        <div class="container position-relative">
+          <div class="text-center mb-5 reveal">
+            <p class="section-mission__kicker text-uppercase mb-2">Engagement &amp; rayonnement</p>
+            <h2 class="section-title display-font h1 shimmer-gold">Notre mission</h2>
+            <p class="section-sub section-mission__lead mx-auto">
+              Il est crucial de valoriser les petits producteurs et agripreneurs locaux via la transformation sur place et
+              des circuits courts (marchés locaux, coopératives), réduisant ainsi la dépendance aux importations.
+              Renforcer cette souveraineté alimentaire implique une citoyenneté active privilégiant la consommation locale à
+              Kinshasa.
+            </p>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-xl-4 reveal mission-col mission-col--1">
+              <article class="mission-card mission-card--terra">
+                <div class="mission-card__accent" aria-hidden="true"></div>
+                <div class="mission-card__body">
+                  <div class="mission-card__icon" aria-hidden="true">
+                    <!-- Icône type Lucide « sprout » (MIT) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 20h10" />
+                      <path d="M10 20c5.5-2.5.8-6.4 3-10" />
+                      <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5 1-4.7 2.9l-1.1 1.9c-1.1 1.9-2.2 3.5-3.2 4.5" />
+                      <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.9 3.5-2.1 4.4-3.9 1-1.9 1.2-4.1.8-6.2" />
+                    </svg>
+                  </div>
+                  <h3 class="mission-card__title display-font h4 mb-3">Agriculture locale</h3>
+                  <p class="mission-card__text mb-0">
+                    Mettre en avant les filières locales, la qualité et la durabilité des productions de la RDC et des
+                    environs de Kinshasa.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 reveal mission-col mission-col--2">
+              <article class="mission-card mission-card--kin">
+                <div class="mission-card__accent" aria-hidden="true"></div>
+                <div class="mission-card__body">
+                  <div class="mission-card__icon" aria-hidden="true">
+                    <!-- Icône type Lucide « map-pin » (MIT) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <h3 class="mission-card__title display-font h4 mb-3">Une ambassadrice par commune</h3>
+                  <p class="mission-card__text mb-0">
+                    Chaque commune désigne une représentante : porte-parole du « consommer local » au plus près des
+                    habitants.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 reveal mission-col mission-col--3">
+              <article class="mission-card mission-card--crown">
+                <div class="mission-card__accent" aria-hidden="true"></div>
+                <div class="mission-card__body">
+                  <div class="mission-card__icon" aria-hidden="true">
+                    <!-- Icône type Lucide « trophy » (MIT) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                      <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                      <path d="M4 22h16" />
+                      <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                      <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                      <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                    </svg>
+                  </div>
+                  <h3 class="mission-card__title display-font h4 mb-3">Une finale pour la couronne</h3>
+                  <p class="mission-card__text mb-0">
+                    Les 24 candidates se retrouvent pour un show final : épreuves, élégance et engagement — une seule
+                    lauréate couronnée.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 24 communes — rempli par js/main.js ; fond agriculture (CSS) -->
+      <section id="ambassadrices" class="section-padding section-ambassadrices">
+        <div class="section-ambassadrices__bg" aria-hidden="true"></div>
+        <div class="section-ambassadrices__overlay" aria-hidden="true"></div>
+        <div class="container position-relative">
+          <div class="text-center mb-5 reveal">
+            <h2 class="section-title display-font h1 shimmer-gold section-ambassadrices__title">
+              Les 24 communes &amp; leurs ambassadrices
+            </h2>
+            <p class="section-sub section-ambassadrices__intro mx-auto">
+              Découvrez les représentantes du consommer local 2026 pour chaque commune de la ville-province de Kinshasa.
+            </p>
+          </div>
+          <div id="communes-grid" class="row g-4"></div>
+        </div>
+      </section>
+
+      <!-- Calendrier -->
+      <section id="calendrier" class="section-padding bg-section-alt">
+        <div class="container">
+          <div class="row g-5 align-items-start">
+            <div class="col-lg-6 reveal">
+              <h2 class="section-title display-font h1 mb-4">
+                <svg class="icon-mcl align-text-top me-2" aria-hidden="true"><use href="#icon-calendar" /></svg>
+                Calendrier
+              </h2>
+              <div class="timeline-mcl">
+                <div class="timeline-item">
+                  <h3 class="h6 text-uppercase text-muted">Phase 1</h3>
+                  <p class="mb-0 fw-semibold">Lancement &amp; mobilisation</p>
+                  <p class="text-secondary small mb-0">Annonce officielle, partenaires et communication nationale.</p>
+                </div>
+                <div class="timeline-item">
+                  <h3 class="h6 text-uppercase text-muted">Phase 2</h3>
+                  <p class="mb-0 fw-semibold">Sélection par commune</p>
+                  <p class="text-secondary small mb-0">Chaque commune présente son ambassadrice pour le consommer local.</p>
+                </div>
+                <div class="timeline-item">
+                  <h3 class="h6 text-uppercase text-muted">Phase 3</h3>
+                  <p class="mb-0 fw-semibold">Préparation &amp; médias</p>
+                  <p class="text-secondary small mb-0">Ateliers, visibilité et préparation à la grande finale.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 reveal">
+              <div class="final-date-box final-date-box--pulse p-4 p-md-5 text-center">
+                <svg class="text-warning mb-3" width="48" height="48" aria-hidden="true"><use href="#icon-crown" /></svg>
+                <h3 class="display-font h3 mb-2">Grande finale — show national</h3>
+                <p class="text-secondary mb-4">
+                  Les 24 ambassadrices s’affrontent pour le titre et la couronne — au programme&nbsp;:
+                  <strong>Exposition (Exhibition)</strong>, <strong>Music</strong>, <strong>Dance</strong>,
+                  <strong>Defile</strong>, <strong>la présentation de projet</strong> et <strong>Coronation</strong>.
+                </p>
+                <p class="display-6 fw-bold text-success mb-1" style="color: var(--mcl-green) !important">
+                  Date à confirmer
+                </p>
+                <p class="small text-muted mb-0">Lieu et billetterie seront communiqués sur ce site et les réseaux officiels.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Organisation / Jury — fond or profond + agriculture -->
+      <section id="organisation" class="section-padding section-organisation">
+        <div class="section-organisation__bg" aria-hidden="true"></div>
+        <div class="section-organisation__overlay" aria-hidden="true"></div>
+        <div class="container position-relative">
+          <div class="text-center mb-5 reveal">
+            <h2 class="section-title display-font h1 section-organisation__title">Organisation &amp; jury</h2>
+            <p class="section-sub section-organisation__intro mx-auto">
+              Comité d’organisation et membres du jury.
+            </p>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-4 col-lg-3 reveal">
+              <div class="card border-0 shadow-sm text-center h-100">
+                <img
+                  src="images/organisation-jury-president.png"
+                  class="card-img-top"
+                  alt="Portrait — Président·e du jury"
+                  width="400"
+                  height="240"
+                  style="object-fit: cover; height: 180px"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="small text-muted mb-1">Président·e du jury</p>
+                  <p class="fw-semibold mb-0">Nom à confirmer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3 reveal">
+              <div class="card border-0 shadow-sm text-center h-100">
+                <img
+                  src="images/organisation-jury-direction.png"
+                  class="card-img-top"
+                  alt="Portrait — Direction du concours"
+                  width="400"
+                  height="240"
+                  style="object-fit: cover; height: 180px"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="small text-muted mb-1">Direction du concours</p>
+                  <p class="fw-semibold mb-0">Nom à confirmer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3 reveal">
+              <div class="card border-0 shadow-sm text-center h-100">
+                <img
+                  src="images/organisation-jury-agricole.png"
+                  class="card-img-top"
+                  alt="Portrait — Personnalité agricole"
+                  width="400"
+                  height="240"
+                  style="object-fit: cover; height: 180px"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <p class="small text-muted mb-1">Personnalité agricole</p>
+                  <p class="fw-semibold mb-0">Nom à confirmer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partenaires -->
+      <section id="partenaires" class="section-padding bg-section-alt">
+        <div class="container">
+          <div class="text-center mb-5 reveal">
+            <h2 class="section-title display-font h1 shimmer-gold">Partenaires &amp; médias</h2>
+            <p class="section-sub">Logos des institutions, entreprises et médias.</p>
+          </div>
+          <div class="row row-cols-2 row-cols-md-4 g-3 g-md-4">
+            <div class="col reveal">
+              <div class="partner-logo-wrap">
+                <img
+                  src="images/partenaire-1.png"
+                  alt="Ministère de l’Agriculture et Sécurité alimentaire — République démocratique du Congo"
+                  width="280"
+                  height="90"
+                  loading="lazy"
+                  class="partner-logo-img"
+                />
+              </div>
+            </div>
+            <div class="col reveal">
+              <div class="partner-logo-wrap">
+                <img
+                  src="images/partenaire-2.png"
+                  alt="RTNC — Radio-Télévision nationale congolaise"
+                  width="280"
+                  height="90"
+                  loading="lazy"
+                  class="partner-logo-img"
+                />
+              </div>
+            </div>
+            <div class="col reveal">
+              <div class="partner-logo-wrap">
+                <img
+                  src="images/partenaire-3.png"
+                  alt="Ministère de la Jeunesse et Éveil Patriotique — République démocratique du Congo"
+                  width="280"
+                  height="90"
+                  loading="lazy"
+                  class="partner-logo-img"
+                />
+              </div>
+            </div>
+            <div class="col reveal">
+              <div class="partner-logo-wrap">
+                <img
+                  src="images/partenaire-4.png"
+                  alt="Miss Ambassadrice Consommer Local Kinshasa 2026-2027 — logo concours"
+                  width="280"
+                  height="90"
+                  loading="lazy"
+                  class="partner-logo-img"
+                />
+              </div>
+            </div>
+            <div class="col reveal"><div class="partner-placeholder partner-placeholder--shimmer">Logo partenaire 5</div></div>
+            <div class="col reveal"><div class="partner-placeholder partner-placeholder--shimmer">Logo partenaire 6</div></div>
+            <div class="col reveal"><div class="partner-placeholder partner-placeholder--shimmer">Logo partenaire 7</div></div>
+            <div class="col reveal"><div class="partner-placeholder partner-placeholder--shimmer">Logo partenaire 8</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="section-title display-font h1 text-center mb-5 reveal shimmer-gold">Questions fréquentes</h2>
+              <div class="accordion reveal" id="faqAccordion">
+                <div class="accordion-item border-0 shadow-sm mb-2">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-participer">
+                      Comment participer ?
+                    </button>
+                  </h3>
+                  <div id="faq-participer" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-secondary">
+                      <p class="mb-3">
+                        Pour vous inscrire, contactez-nous sur <strong>WhatsApp</strong> au numéro ci-dessous ou via le bouton&nbsp;:
+                      </p>
+                      <p class="mb-0">
+                        <a
+                          class="btn btn-gold btn-sm"
+                          href="https://wa.me/243831700110"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Ouvrir WhatsApp — inscription</a
+                        >
+                      </p>
+                      <p class="small mt-2 mb-0">
+                        <a href="https://wa.me/243831700110" class="link-success text-break" target="_blank" rel="noopener noreferrer"
+                          >https://wa.me/243831700110</a
+                        >
+                        <span class="d-block text-muted mt-1">+243&nbsp;831&nbsp;700&nbsp;110</span>
+                      </p>
+
+                      <h4 class="h6 text-dark mt-4 mb-2 fw-semibold">Conditions d’inscription</h4>
+                      <ul class="mb-0 ps-3">
+                        <li>Avoir au minimum un <strong>diplôme d’État</strong></li>
+                        <li>Avoir entre <strong>18 et 40 ans</strong></li>
+                        <li>Être de bonne moralité</li>
+                        <li>Parler au moins une langue locale</li>
+                        <li>Être élégante et éloquente</li>
+                        <li>Avoir une vision pour un développement durable de la consommation locale</li>
+                        <li>Être disponible, ouverte d’esprit et avoir un sens d’analyse élevé</li>
+                      </ul>
+
+                      <h4 class="h6 text-dark mt-4 mb-2 fw-semibold">Déroulement des castings</h4>
+                      <ul class="mb-0 ps-3">
+                        <li><strong>Étape 1 :</strong> épreuve écrite (questions sur la consommation locale)</li>
+                        <li><strong>Étape 2 :</strong> prestance et éloquence</li>
+                      </ul>
+
+                      <h4 class="h6 text-dark mt-4 mb-2 fw-semibold">Récompenses pour la lauréate</h4>
+                      <ul class="mb-0 ps-3">
+                        <li>Une voiture de mandat (uniquement pour des missions officielles)</li>
+                        <li>Une bourse d’études</li>
+                        <li>Une tournée nationale</li>
+                        <li>Un voyage à l’international</li>
+                        <li>Une enveloppe financière</li>
+                        <li>Égérie des marques</li>
+                        <li>Et plein d’autres cadeaux…</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 shadow-sm mb-2">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                      Qui peut participer au concours ?
+                    </button>
+                  </h3>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-secondary">
+                      Les critères précis (âge, résidence, etc.) sont définis par le règlement officiel. En général,
+                      chaque commune retient une candidate pour représenter le « consommer local » sur son territoire.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 shadow-sm mb-2">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                      Comment une commune choisit-elle son ambassadrice ?
+                    </button>
+                  </h3>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-secondary">
+                      La procédure (candidatures, jury local, désignation) est communiquée par les autorités communales et
+                      le comité du concours. Suivez les annonces officielles.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 shadow-sm mb-2">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                      Où et quand a lieu la grande finale ?
+                    </button>
+                  </h3>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-secondary">
+                      La date et le lieu de la finale réunissant les 24 candidates seront publiés sur ce site et les
+                      canaux officiels. Indication actuelle : <strong>date à confirmer</strong>.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 shadow-sm mb-2">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                      Comment devenir partenaire ou sponsor ?
+                    </button>
+                  </h3>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-secondary">
+                      Utilisez le formulaire de contact ou l’adresse e-mail communiquée par l’organisation pour proposer
+                      un partenariat média, institutionnel ou privé.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section-padding bg-section-alt">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+              <div class="text-center mb-4 reveal">
+                <h2 class="section-title display-font h1">
+                  <svg class="icon-mcl align-text-top me-2" aria-hidden="true"><use href="#icon-mail" /></svg>
+                  Contact
+                </h2>
+                <p class="section-sub">
+                  Presse, partenariats ou questions générales — laissez un message.
+                </p>
+              </div>
+              <form id="contact-form" class="card border-0 shadow p-4 p-md-5 reveal" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-name">Nom</label>
+                    <input class="form-control" id="contact-name" name="name" type="text" autocomplete="name" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-email">E-mail</label>
+                    <input
+                      class="form-control"
+                      id="contact-email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="contact-message">Message</label>
+                    <textarea class="form-control" id="contact-message" name="message" rows="4"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-gold px-4">Envoyer</button>
+                  </div>
+                  <div class="col-12">
+                    <div id="contact-feedback" class="alert" role="status" hidden></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-mcl py-5 mt-0">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6">
+            <p class="mb-2 fw-semibold display-font">Miss Consommons Local</p>
+            <p class="small mb-0 opacity-75">
+              Concours pour la promotion du consommer local — Kinshasa, RDC.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="small mb-2">
+              <a href="#">Facebook</a> · <a href="#">Instagram</a> · <a href="#">X</a>
+              <span class="text-white-50"> (liens placeholders)</span>
+            </p>
+            <p class="small mb-0 opacity-75">
+              © <span id="year-copy">2026</span> — Mentions légales à compléter.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
